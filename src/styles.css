@@ -2,3 +2,11 @@
   font-family: sans-serif;
   text-align: center;
 }
+button{
+  width: 20%;
+  height:40px;
+  border-radius: 0.5rem;
+  padding:1rem 1rem;
+  margin: 1rem 1rem;
+
+}
