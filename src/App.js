@@ -4,33 +4,50 @@ import "./styles.css";
 var cuisineDictionery = {
   Indian: [
     {
-      Name: "Samosa",
-      Rating: "7/10"
+      Name: "Invitation to Indian Cooking",
+      Rating: "8/10",
+      Author: "Madhur Jaffrey"
     },
     {
-      Name: "Dosa",
-      Rating: "9/10"
+      Name: "How to Cook Indian",
+      Rating: "9/10",
+      Author: "Sanjeev Kapoor"
+    },
+    {
+      Name: "The Dal Cookbook",
+      Rating: "7.5/10",
+      Author: "Krishna Dutta"
     }
   ],
 
   Itilian: [
     {
-      Name: "Pizza",
-      Rating: "7/10"
+      Name: "The Tuscan Sun Cookbook: Recipes from Our Italian Kitchen",
+      Rating: "8.5/10",
+      Author: "Clarkson Potter"
     },
     {
-      Name: "Pasta",
-      Rating: "9/10"
+      Name: "Pasta Grannies: The Official Cookbook",
+      Rating: "8/10",
+      Author: "Vickey Bennyson"
     }
   ],
   Lebanese: [
     {
-      Name: "Falafal",
-      Rating: "7/10"
+      Name:
+        "Authentic Recipes for Fresh and Flavorful Mediterranean Home Cooking",
+      Rating: "8/10",
+      Author: "Julie Taboulie"
     },
     {
-      Name: "Peta Bread with Hummas",
-      Rating: "9/10"
+      Name: " 170 Fresh And Healthy Mediterranean Favorites",
+      Rating: "9/10",
+      Author: "Kamal Al-Faqih"
+    },
+    {
+      Name: " Man’oushe: Inside the Lebanese Street Corner Bakery",
+      Rating: "7.5/10",
+      Author: "Barbara Abdeni Massaad"
     }
   ]
 };
@@ -45,8 +62,12 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Food Recommendations!!!</h1>
       <div>
+        <h1>F🍔🍝d &nbsp;&nbsp;Books &nbsp;&nbsp; R🥚🥐🍛mmendati🥞ns!!!</h1>
+        <p>
+          Checkout these different cook books from different cuisines...and help
+          urself if u love cooking.
+        </p>
         {diffCuisine.map((item) => (
           <button
             key={item}
@@ -58,13 +79,22 @@ export default function App() {
           </button>
         ))}
       </div>
+      <hr />
       <div>
         <ui>
           {cuisineDictionery[selectedDish].map((element) => (
-            <li>
-              {element.Name}
-
-              {element.Rating}
+            <li key={element}>
+              <p style={{ fontWeight: "bolder" }}>{element.Name} </p>
+              <p style={{ fontStyle: "italic" }}>-by {element.Author} </p>
+              <p
+                style={{
+                  fontSize: "smaller",
+                  fontStyle: "italic",
+                  color: "blue"
+                }}
+              >
+                {element.Rating}
+              </p>
             </li>
           ))}
         </ui>
